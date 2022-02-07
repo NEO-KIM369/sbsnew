@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+ <meta charset="UTF-8">
+ <title>0319_LAVA</title>
+ <style>
+ body {
+ margin: 20px;
+ padding: 20px;
+ background: #555;
+ font-size: 16px;
+ }
+
+ .title {
+ font-size: 22px;
+ font-weight: 600;
+ color: #000;
+ }
+
+ .nav {
+ position: relative;
+ margin: 50px 0;
+ width: 700px;
+ overflow: hidden; /*중요*/
+ text-align: center;
+ border: 1px solid red;
+ }
+
+ .nav a {
+ display: block;
+ float: left;
+ padding: 15px 0 35px;
+ width: 20%;
+ position: relative;
+ text-decoration: none;
+ font-size: 16px;
+ transition: 0.6s;
+ color: #000;
+ }
+
+ .nav a:hover {
+ color: #8ac007;
+ }
+
+ .nav.dot .effect {
+ position: absolute;
+ left: -25%;
+ transition: 0.8s;
+ bottom: 15px;
+ width: 12px;
+ height: 12px;
+ margin-left: -6px;
+ background: #8ac007;
+ border-radius: 50%;
+ }
+
+ .nav a:nth-child(1):hover ~ .effect {
+ left: 10%;
+ }
+
+ .nav a:nth-child(2):hover ~ .effect {
+ left: 30%;
+ }
+
+ .nav a:nth-child(3):hover ~ .effect {
+ left: 50%;
+ }
+
+ .nav a:nth-child(4):hover ~ .effect {
+ left: 70%;
+ }
+
+ .nav a:nth-child(5):hover ~ .effect {
+ left: 90%;
+ }
+
+ .nav.dot:after {
+ content:"";
+ display: block;
+ clear: both;
+ position: absolute;
+ bottom: 20px;
+ width: 100%;
+ height: 1px;
+ background: #8ac007;
+ }
+
+ .nav.dot a:after {
+ content:"";
+ display: block;
+ clear: both;
+ position: absolute;
+ left: 50%;
+ bottom: 18px;
+ width: 4px;
+ height: 4px;
+ border-radius: 50%;
+ background: #8ac007;
+ margin-left: -2px;
+ }
+
+
+ </style>
+</head>
+<body>
+ <div class="container">
+
+ <div class="nav dot">
+ <a href="#">HTML</a>
+ <a href="#">CSS</a>
+ <a href="#">JAVASCRIPT</a>
+ <a href="#">JQUERY</a>
+ <a href="#">Portfolio</a>
+ <div class="effect"></div>
+ </div>
+ </div>
+</body>
+</html>

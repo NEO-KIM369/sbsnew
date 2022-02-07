@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 50px;
+            background: #555;
+            font-size: 16px;
+        }
+
+        .nav {
+            width: 700px;
+            margin: 50px 0;
+            overflow: hidden;
+            text-align: center;
+            border: 1px solid red;
+            position: relative;
+
+        }
+
+        .nav a {
+            display: block;
+            float: left;
+            padding: 15px 0 35px;
+            width: 20%;
+            position: relative;
+            text-decoration: none;
+            transition: 0.6s;
+            color: white;
+        }
+
+        .nav a:hover {
+            color: #8ac007;
+        }
+
+        .nav .effect {
+            position: absolute;
+            left: -25%;
+            transition: 0.8s;
+            bottom: 15px;
+            width: 12px;
+            height: 12px;
+            margin-left: -6px;
+            background: #8ac007;
+            border-radius: 50%;
+        }
+
+        .nav:after {
+            content: "";
+            display: block;
+            clear: both;
+            position: absolute;
+            bottom: 20px;
+            width: 100%;
+            height: 1px;
+            background: #8ac007;
+        }
+
+        .nav a:after {
+            content: "";
+            display: block;
+            clear: both;
+            position: absolute;
+            left: 50%;
+            bottom: 18px;
+            width: 4px;
+            height: 4px;
+            border-radius: 50%;
+            background: #8ac007;
+        }
+
+        .nav a:nth-child(1):hover ~ .effect {
+            left: 10%;
+        }
+
+        .nav a:nth-child(2):hover ~ .effect {
+            left: 30%;
+        }
+
+        .nav a:nth-child(3):hover ~ .effect {
+            left: 50%;
+        }
+
+        .nav a:nth-child(4):hover ~ .effect {
+            left: 70%;
+        }
+
+        .nav a:nth-child(5):hover ~ .effect {
+            left: 90%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="nav">
+            <a href="Html">1</a>
+            <a href="CSS">2</a>
+            <a href="Javascript">3</a>
+            <a href="Jquery">4</a>
+            <a href="Portfolio">5</a>
+            <div class="effect"></div>
+        </div>
+    </div>
+</body>
+</html>
